@@ -1,0 +1,79 @@
+# 1. 安装必要的库（如果未安装）
+!pip install imbalanced-learn scikit-learn pandas matplotlib numpy openpyxl
+
+# 2. 导入库
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+from sklearn.preprocessing import LabelEncoder
+from imblearn.over_sampling import SMOTE
+
+# 3. 读取 CFPS 2014 数据
+cfps_path = "data/CFPS 2014 part.xlsx"
+cfps_data = pd.read_excel(cfps_path)
+
+# 4. 重命名列以确保一致性
+cfps_data.rename(columns={
+    "urban or rural": "urban_rural",
+    "father absence": "father_absence",
+    "mother absence": "mother_absence",
+    "child sickness": "child_sickness"
+}, inplace=True)
+
+# 5. 数据预处理
+label_encoders = {}
+categorical_columns = ["region", "urban_rural", "father_absence", "mother_absence", "child_sickness"]
+
+for col in categorical_columns:
+    le = LabelEncoder()
+    cfps_data[col] = le.fit_transform(cfps_data[col])
+    label_encoders[col] = le  # 存储编码器，以便后续解码
+
+# 6. 定义特征和目标变量
+X = cfps_data.drop(columns=["child_sickness"])
+y = cfps_data["child_sickness"]
+
+# 7. 划分训练集和测试集 (80% 训练, 20% 测试)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y)
+
+# 8. 统计类别分布（增强前）
+print("原始数据类别分布：")
+print(pd.Series(y_train).value_counts())
+
+# 9. 使用 SMOTE 进行数据增强
+smote = SMOTE(random_state=42)
+X_train_smote, y_train_smote = smote.fit_resample(X_train, y_train)
+
+# 10. 统计类别分布（增强后）
+print("\nSMOTE 后类别分布：")
+print(pd.Series(y_train_smote).value_counts())
+
+# 11. 训练 Random Forest 分类器（使用增强数据）
+rf_model = RandomForestClassifier(n_estimators=100, max_depth=10, min_samples_split=2, random_state=42)
+rf_model.fit(X_train_smote, y_train_smote)
+
+# 12. 预测测试集
+y_pred = rf_model.predict(X_test)
+
+# 13. 计算模型准确率和分类报告
+accuracy = accuracy_score(y_test, y_pred)
+classification_rep = classification_report(y_test, y_pred)
+conf_matrix = confusion_matrix(y_test, y_pred)
+
+print("\n优化后的模型准确率:", accuracy)
+print("\n分类报告:\n", classification_rep)
+print("\n混淆矩阵:\n", conf_matrix)
+
+# 14. 可视化特征重要性
+feature_importances = rf_model.feature_importances_
+feature_names = X.columns
+
+plt.figure(figsize=(8, 5))
+plt.barh(feature_names, feature_importances, color='skyblue')
+plt.xlabel("Feature Importance")
+plt.ylabel("Feature")
+plt.title("Feature Importance in Random Forest Model (After SMOTE)")
+plt.show()
