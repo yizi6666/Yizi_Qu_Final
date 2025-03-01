@@ -12,7 +12,7 @@ from sklearn.preprocessing import LabelEncoder
 from imblearn.over_sampling import SMOTE
 
 # 3. 读取 CFPS 2014 数据
-cfps_path = "data/CFPS 2014 part.xlsx"
+cfps_path = "data/CFPS_2014_part.xlsx"
 cfps_data = pd.read_excel(cfps_path)
 
 # 4. 重命名列以确保一致性
