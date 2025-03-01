@@ -30,6 +30,7 @@ All required libraries are listed in `requirements.txt`. If running in **Google 
 
 ```python
 !pip install pandas numpy scikit-learn matplotlib seaborn imbalanced-learn pyreadstat
+```
 
 ## **Example Usage**
 This project provides **multiple ways to run the analysis**, including **Google Colab, command-line execution, and Jupyter Notebook**.
