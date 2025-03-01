@@ -1,8 +1,7 @@
 # **Parental Absence and Child Development in China: A Machine Learning Perspective**
 
 ## **Authors**
-- **[Your Name]** – Research Design, Data Analysis, Machine Learning  
-- **[Team Member Name]** – Literature Review, Policy Analysis, Visualization  
+- **Yizi Qu** – Research Design, Data Analysis, Machine Learning, Literature Review, Policy Analysis, Visualization  
 
 ## **Disclaimer**
 Submitted for **STATS201: Machine Learning for Social Science**, instructed by **Prof. Luyao Zhang**, **Duke Kunshan University, Autumn 2025**.  
@@ -18,7 +17,7 @@ This project enhanced our skills in **machine learning for social science**, spe
 ---
 
 ## **Embedded Media** 
-[View Research Poster](./Researchposter.pdf)  
+[View Research Poster](./Research Poster.pdf)
 
 ---
 
