@@ -17,7 +17,7 @@ This project enhanced our skills in **machine learning for social science**, spe
 ---
 
 ## **Embedded Media** 
-[View Research Poster](./Research Poster.pdf)
+[View Research Poster](./Research_Poster.pdf)
 
 ---
 
