@@ -1,7 +1,8 @@
 # **Parental Absence and Child Development in China: A Machine Learning Perspective**
 
 ## **Authors**
-- **Yizi Qu** – Research Design, Data Analysis, Machine Learning, Literature Review, Policy Analysis, Visualization  
+- **[Your Name]** – Research Design, Data Analysis, Machine Learning  
+- **[Team Member Name]** – Literature Review, Policy Analysis, Visualization  
 
 ## **Disclaimer**
 Submitted for **STATS201: Machine Learning for Social Science**, instructed by **Prof. Luyao Zhang**, **Duke Kunshan University, Autumn 2025**.  
@@ -12,69 +13,70 @@ Thanks to **Prof. Luyao Zhang**, classmates for feedback, and **open-source tool
 ---
 
 ## **Statement of Intellectual and Professional Growth**
-This project strengthened our skills in **machine learning for social science**, covering **data preprocessing, Random Forest modeling, SMOTE for class balancing, and SHAP-based explainability**. It enhanced our ability to **analyze imbalanced social data and apply AI in policy contexts**.
+This project enhanced our skills in **machine learning for social science**, specifically in **Random Forest modeling, class imbalance handling with SMOTE, and SHAP-based interpretability**. It deepened our understanding of **social science applications of AI** and policy-driven data analysis.
 
 ---
 
-## **Embedded Media**
-[View Research Poster](./poster.pdf)  
+## **Embedded Media** 
+[View Research Poster](./Researchposter.pdf)  
 
 ---
 
 ## **Table of Contents**
-1. [Introduction](#introduction)  
-2. [Dataset Overview](#dataset-overview)  
-3. [Methodology](#methodology)  
-4. [Results & Discussion](#results--discussion)  
-5. [Policy & Ethical Considerations](#policy--ethical-considerations)  
-6. [Future Directions](#future-directions)  
-7. [Navigation Instructions](#navigation-instructions)  
+1. [Background and Motivation](#background-and-motivation)  
+2. [Research Questions](#research-questions)  
+3. [Application Scenarios](#application-scenarios)  
+4. [Methodologies](#methodologies)  
+5. [Results: Random Forest & SMOTE Analysis](#results-random-forest--smote-analysis)  
+6. [Intellectual Merits](#intellectual-merits)  
+7. [Practical Impacts](#practical-impacts)  
+8. [Navigation Instructions](#navigation-instructions)  
 
 ---
 
-## **Introduction**
-This study examines how **maternal vs. paternal absence** affects **child health and well-being** in China, using **CFPS (2010-2014) data** and **machine learning models** to identify key risk factors.
+## **Background and Motivation**
+This study explores how **parental absence due to labor migration** affects **child well-being** in China. With increasing internal migration, children left behind face **health, emotional, and educational challenges**. Understanding these effects using **machine learning** can inform **targeted policy interventions**.
 
 ---
 
-## **Dataset Overview**
-- **Source**: CFPS 2014  
-- **Key Variables**:  
-  - **Dependent**: Child health, well-being scores  
-  - **Independent**: Parental presence, urban/rural status, income  
-- **Preprocessing**: Categorical encoding, missing data handling, SMOTE  
-
-[See Data Dictionary](./data_dictionary.md).  
+## **Research Questions**
+- **How does parental absence affect child health and well-being?**  
+- **Is maternal absence more significant than paternal absence?**  
+- **Can machine learning improve prediction accuracy in child welfare studies?**  
 
 ---
 
-## **Methodology**
-- **Regression Models**: Fixed-effects for causal inference  
-- **Machine Learning**:  
-  - **Random Forest** for child health classification  
-  - **SMOTE** for class balancing  
-  - **NLP (BERT, sentiment analysis)** for interpretability  
+## **Application Scenarios**
+- **Public Policy**: Identifying at-risk children for targeted welfare programs.  
+- **Healthcare & Education**: Predicting health risks based on parental presence.  
+- **NGOs & CSR**: Supporting child development initiatives using AI-driven insights.  
 
 ---
 
-## **Results & Discussion**
-- **Maternal absence has a stronger negative impact than paternal absence**  
-- **SMOTE improves minority class recall but introduces noise**  
-- **SHAP analysis identifies parental presence as the strongest predictor**  
+## **Methodologies**
+- **Random Forest**: Classifying child health outcomes.  
+- **SMOTE**: Balancing class distribution to improve minority class predictions.  
+- **SHAP Analysis**: Identifying key predictors of child well-being.  
+- **NLP**: Extracting interpretability insights from social narratives.  
 
 ---
 
-## **Policy & Ethical Considerations**
-- **Hukou Reform**: Ensuring **migrant children’s access to healthcare & education**  
-- **AI Fairness**: Preventing bias in **social welfare decision-making**  
-- **SDGs**: Aligns with **SDG 3 (Health) and SDG 10 (Reduced Inequalities)**  
+## **Results: Random Forest & SMOTE Analysis**
+- **Maternal absence has a stronger negative impact than paternal absence**.  
+- **SMOTE improves classification for underrepresented groups but introduces noise**.  
+- **SHAP analysis reveals parental presence as the dominant predictor of child health**.  
 
 ---
 
-## **Future Directions**
-- **Longitudinal AI models** for multi-year predictions  
-- **Advanced NLP** for policy text analysis  
-- **AI & Policy**: Using predictive models for **child welfare interventions**  
+## **Intellectual Merits**
+This study advances **machine learning applications in social science**, demonstrating how **AI-driven classification** improves child welfare research. It bridges the gap between **traditional econometric approaches** and **data-driven policy insights**, inspiring future studies in **explainable AI and longitudinal child development models**.
+
+---
+
+## **Practical Impacts**
+- **Policy**: Supports evidence-based decisions for migrant child welfare.  
+- **Industry**: AI-powered child health prediction tools for NGOs and government agencies.  
+- **Ethics & AI Governance**: Ensures **fair, transparent, and privacy-conscious** machine learning applications in social policy.  
 
 ---
 
@@ -84,4 +86,4 @@ This study examines how **maternal vs. paternal absence** affects **child health
 - **Docs**: `./docs/` – Methodology, preprocessing  
 - **Dependencies**: `requirements.txt`  
 
-For full details, visit the **[GitHub Repository](https://github.com/YOUR_REPO_LINK)**.
+For full details, visit the **[GitHub Repository](https://github.com/yizi6666/Yizi_Qu_Final/tree/main)**.
