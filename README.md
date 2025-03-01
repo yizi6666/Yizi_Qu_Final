@@ -80,9 +80,22 @@ This study advances **machine learning applications in social science**, demonst
 ---
 
 ## **Navigation Instructions**
-- **Code**: `./code/` – Machine learning models, simulations  
-- **Datasets**: `./data/` – CFPS raw and processed data  
-- **Docs**: `./docs/` – Methodology, preprocessing  
-- **Dependencies**: `requirements.txt`  
+
+## **Navigation Instructions**
+This repository contains all necessary resources for replicating our analysis on **Parental Absence and Child Development Using CFPS Data**.
+
+### **📂 Code for Simulations and Visualizations** (`./code/`)
+All machine learning scripts, data preprocessing, and visualization codes are stored in this directory.
+- [`random_forest.py`](./code/prediction) – Implements **Random Forest classification, Handles **data imbalance using SMOTE**.
+
+### **📂 Datasets and Preprocessing Steps** (`./data/`)
+This directory contains **raw and processed datasets** used in the analysis.
+- [`CFPS_2014_raw.xlsx`](./data/CFPS_2014_part.xlsx) – **Original CFPS dataset**.
+
+### **📂 Visualization** (`./docs/`)
+This folder contains **detailed documentation** about the dataset and methodology.
+- [`data_dictionary.md`](./visualization) – **Detailed variable definitions and descriptions**.
+
+pip install -r requirements.txt
 
 For full details, visit the **[GitHub Repository](https://github.com/yizi6666/Yizi_Qu_Final/tree/main)**.
